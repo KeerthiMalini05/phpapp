@@ -16,8 +16,8 @@ if ($conn->query($sql1) === TRUE) {
           echo "\nTable Persons created successfully <br>";
               
               $sql = "insert into persons (name,city) values ('Keerthi','Coimbatore');";
-              //$sql .= "insert into persons (name,city) values ('Brevis','Chennai');";
-              //$sql .= "insert into persons (name,city) values ('Milne','Bangalore');";
+              $sql = "insert into persons (name,city) values ('Brevis','Chennai');";
+              $sql = "insert into persons (name,city) values ('Milne','Bangalore');";
               if ($conn->query($sql) === TRUE) {
               echo "\n New record created successfully <br>";
               } 
