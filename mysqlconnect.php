@@ -16,8 +16,8 @@ if ($conn->query($sql1) === TRUE) {
           echo "\nTable Books created successfully <br>";
               
               $sql = "insert into books (name,author) values ('Alice in wonderland','chetan');";
-              $sql .= "insert into books (name,author) values ('Brevis-world','Maria');";
-              $sql .= "insert into books (name,author) values ('Milne-monarch','steven');";
+              $sql = "insert into books (name,author) values ('Brevis-world','Maria');";
+              $sql = "insert into books (name,author) values ('Milne-monarch','steven');";
               if ($conn->query($sql) === TRUE) {
               echo "\n New record created successfully <br>";
               } 
