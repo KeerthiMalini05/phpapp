@@ -11,11 +11,11 @@ if($conn->connect_error) {
 }
 echo '--------- MySQL Connected successfully -------<br>';
 
-$sql1 = "CREATE TABLE IF NOT EXISTS books( id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(50), city VARCHAR(50));";
+$sql1 = "CREATE TABLE IF NOT EXISTS books( id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(50), author VARCHAR(50));";
 if ($conn->query($sql1) === TRUE) {
           echo "\nTable Books created successfully <br>";
               
-              $sql = "insert into books (name,author) values ('Alice in wonderland','chetan');";
+              $sql = "insert into books (name,author) values ('Alice-in-wonderland','chetan');";
               $sql = "insert into books (name,author) values ('Brevis-world','Maria');";
               $sql = "insert into books (name,author) values ('Milne-monarch','steven');";
               if ($conn->query($sql) === TRUE) {
@@ -36,7 +36,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
           // output data of each row
            while($row = $result->fetch_assoc()) {
-               echo " Name: " . $row["name"]. " City: " . $row["author"]. "<br>";
+               echo " Name: " . $row["name"]. " Author: " . $row["author"]. "<br>";
                  }
             } else {
                    echo "0 results";
